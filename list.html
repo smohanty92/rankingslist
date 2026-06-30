@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RankingsList</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="viewer-body">
+  <main class="viewer-shell">
+    <nav class="top-nav">
+      <a href="./index.html">← RankingsList</a>
+      <button id="shareButton" type="button">Share</button>
+    </nav>
+
+    <header class="viewer-header">
+      <div class="eyebrow" id="siteLabel">RankingsList</div>
+      <h1 id="listTitle">Loading…</h1>
+      <p id="listDescription"></p>
+    </header>
+
+    <section class="rank-card" aria-live="polite">
+      <div class="rank-banner">
+        <div class="rank-number" id="rankLabel">#</div>
+        <div class="progress" id="progressLabel"></div>
+      </div>
+
+      <div class="entry" id="entry">
+        <div class="image-panel">
+          <img id="entryImage" class="entry-image hidden" alt="" />
+          <div class="emoji-art" id="entryEmoji" role="img" aria-label=""></div>
+        </div>
+
+        <div class="content-panel">
+          <h2 id="entryTitle"></h2>
+          <div class="subtitle" id="entrySubtitle"></div>
+          <p class="comment" id="entryComment"></p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="prevButton" type="button">← Previous</button>
+        <div class="dots" id="dots"></div>
+        <button id="nextButton" type="button">Next →</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
