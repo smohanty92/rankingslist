@@ -1,0 +1,30 @@
+{
+  "title": "Top 3 Fruits",
+  "description": "A tiny ranked-list prototype, going from number three down to number one.",
+  "items": [
+    {
+      "rank": 3,
+      "title": "Apple",
+      "subtitle": "Classic • Crisp • Doctor-adjacent",
+      "emoji": "🍎",
+      "imageAlt": "Apple",
+      "comment": "One a day keeps the doctor away."
+    },
+    {
+      "rank": 2,
+      "title": "Orange",
+      "subtitle": "Citrus • Juicy • Halftime energy",
+      "emoji": "🍊",
+      "imageAlt": "Orange",
+      "comment": "I bet you can't run with this."
+    },
+    {
+      "rank": 1,
+      "title": "Blueberry",
+      "subtitle": "Tiny • Elite • Cinema-adjacent",
+      "emoji": "🫐",
+      "imageAlt": "Blueberry",
+      "comment": "Led to the best movie of all time."
+    }
+  ]
+}
