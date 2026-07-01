@@ -19,20 +19,24 @@
       <p id="listDescription"></p>
     </header>
 
-    <section class="rank-card" aria-live="polite">
-      <div class="rank-banner">
-        <div class="rank-number" id="rankLabel">#</div>
-      </div>
-
+    <section class="rank-card" id="rankCard" aria-live="polite">
       <div class="entry" id="entry">
+        <div class="rank-banner">
+          <div class="rank-number" id="rankLabel">10.</div>
+        </div>
+
         <div class="image-panel">
-          <img id="entryImage" class="entry-image hidden" alt="" />
-          <div class="emoji-art" id="entryEmoji" role="img" aria-label=""></div>
+          <div class="poster-frame">
+            <img id="entryImage" class="entry-image hidden" alt="" />
+            <div class="poster-placeholder" id="posterPlaceholder">Poster<br>Image</div>
+          </div>
         </div>
 
         <div class="content-panel">
           <h2 id="entryTitle"></h2>
-          <div class="subtitle" id="entrySubtitle"></div>
+          <div class="movie-year" id="entryYear"></div>
+          <div class="director" id="entryDirector"></div>
+          <div class="quote" id="entryQuote"></div>
           <p class="comment" id="entryComment"></p>
         </div>
       </div>

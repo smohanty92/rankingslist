@@ -1,5 +1,5 @@
 const params = new URLSearchParams(window.location.search);
-const slug = params.get("slug") || "top-3-fruits";
+const slug = params.get("slug") || "top-10-movies";
 
 let list = null;
 let currentIndex = 0;
@@ -8,12 +8,15 @@ let touchStartY = 0;
 
 const listTitle = document.getElementById("listTitle");
 const listDescription = document.getElementById("listDescription");
-const rankLabel = document.getElementById("rankLabel");
+const rankCard = document.getElementById("rankCard");
 const entry = document.getElementById("entry");
+const rankLabel = document.getElementById("rankLabel");
 const entryImage = document.getElementById("entryImage");
-const entryEmoji = document.getElementById("entryEmoji");
+const posterPlaceholder = document.getElementById("posterPlaceholder");
 const entryTitle = document.getElementById("entryTitle");
-const entrySubtitle = document.getElementById("entrySubtitle");
+const entryYear = document.getElementById("entryYear");
+const entryDirector = document.getElementById("entryDirector");
+const entryQuote = document.getElementById("entryQuote");
 const entryComment = document.getElementById("entryComment");
 const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
@@ -32,7 +35,7 @@ async function loadList() {
     document.title = `${list.title} | RankingsList`;
     render();
   } catch (error) {
-    document.querySelector(".rank-card").innerHTML = `
+    rankCard.innerHTML = `
       <div class="error-card">
         <h2>List not found</h2>
         <p>We couldn't find a list for <strong>${slug}</strong>.</p>
@@ -40,7 +43,7 @@ async function loadList() {
       </div>
     `;
     listTitle.textContent = "List not found";
-    listDescription.textContent = "Try opening one of the example lists from the homepage.";
+    listDescription.textContent = "Try opening one of the lists from the homepage.";
   }
 }
 
@@ -64,21 +67,23 @@ function render() {
   entry.offsetHeight;
   entry.style.animation = "";
 
-  rankLabel.textContent = `#${item.rank}`;
+  rankLabel.textContent = `${item.rank}.`;
   entryTitle.textContent = item.title;
-  entrySubtitle.textContent = item.subtitle || "";
+  entryYear.textContent = item.year ? `(${item.year})` : "";
+  entryDirector.textContent = item.director ? `Directed by ${item.director}` : "";
+  entryQuote.textContent = item.quote ? `“${item.quote}”` : "";
   entryComment.textContent = item.comment || "";
 
   if (item.image) {
     entryImage.src = item.image;
     entryImage.alt = item.imageAlt || item.title;
     entryImage.classList.remove("hidden");
-    entryEmoji.classList.add("hidden");
+    posterPlaceholder.classList.add("hidden");
   } else {
-    entryEmoji.textContent = item.emoji || "🏆";
-    entryEmoji.setAttribute("aria-label", item.imageAlt || item.title);
-    entryEmoji.classList.remove("hidden");
+    entryImage.removeAttribute("src");
+    entryImage.alt = "";
     entryImage.classList.add("hidden");
+    posterPlaceholder.classList.remove("hidden");
   }
 
   prevButton.disabled = currentIndex === 0;
@@ -101,12 +106,12 @@ function goNext() {
   }
 }
 
-entry.addEventListener("touchstart", (event) => {
+rankCard.addEventListener("touchstart", (event) => {
   touchStartX = event.changedTouches[0].screenX;
   touchStartY = event.changedTouches[0].screenY;
 }, { passive: true });
 
-entry.addEventListener("touchend", (event) => {
+rankCard.addEventListener("touchend", (event) => {
   const touchEndX = event.changedTouches[0].screenX;
   const touchEndY = event.changedTouches[0].screenY;
 

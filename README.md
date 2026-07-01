@@ -2,49 +2,21 @@
 
 A tiny static prototype for beautiful, shareable ranked lists.
 
-## Files
+## v5 changes
 
-- `index.html` — landing page
-- `list.html` — reusable carousel viewer
-- `styles.css` — site styles
-- `script.js` — loads a list by slug and renders it
-- `lists/top-3-fruits.json` — example list data
+- Larger left-aligned rank: `10.`
+- No pound sign
+- Fixed poster frame for consistent image sizing
+- Images use `object-fit: cover`
+- No "Swipe left or right" text
 
-## Run locally
+## Image fields
 
-```bash
-python3 -m http.server 3000
+Each item can use an absolute image URL:
+
+```json
+"image": "https://example.com/poster.jpg",
+"imageAlt": "Movie poster"
 ```
 
-Then open:
-
-```text
-http://localhost:3000
-```
-
-## Add a new list
-
-Create a new JSON file in `lists/`, for example:
-
-```text
-lists/top-10-movies.json
-```
-
-Then open it at:
-
-```text
-list.html?slug=top-10-movies
-```
-
-## Update workflow
-
-After editing files:
-
-```bash
-git status
-git add .
-git commit -m "Improve mobile list viewer"
-git push
-```
-
-Vercel will automatically redeploy after the push.
+If `image` is blank, the app shows a poster placeholder.
