@@ -1,22 +1,7 @@
 # RankingsList
 
-A tiny static prototype for beautiful, shareable ranked lists.
+## v6 changes
 
-## v5 changes
-
-- Larger left-aligned rank: `10.`
-- No pound sign
-- Fixed poster frame for consistent image sizing
-- Images use `object-fit: cover`
-- No "Swipe left or right" text
-
-## Image fields
-
-Each item can use an absolute image URL:
-
-```json
-"image": "https://example.com/poster.jpg",
-"imageAlt": "Movie poster"
-```
-
-If `image` is blank, the app shows a poster placeholder.
+- Images are forced into the same poster frame with `object-fit: fill`
+- Quote now definitely renders from `quote` in JSON
+- Quote style is light gray italic with opening/closing quotes

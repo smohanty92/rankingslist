@@ -71,7 +71,15 @@ function render() {
   entryTitle.textContent = item.title;
   entryYear.textContent = item.year ? `(${item.year})` : "";
   entryDirector.textContent = item.director ? `Directed by ${item.director}` : "";
-  entryQuote.textContent = item.quote ? `“${item.quote}”` : "";
+
+  if (item.quote) {
+    entryQuote.textContent = `“${item.quote}”`;
+    entryQuote.classList.remove("hidden");
+  } else {
+    entryQuote.textContent = "";
+    entryQuote.classList.add("hidden");
+  }
+
   entryComment.textContent = item.comment || "";
 
   if (item.image) {
