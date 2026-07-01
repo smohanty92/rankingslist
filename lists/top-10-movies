@@ -1,0 +1,34 @@
+{
+  "template": "movie",
+  "title": "Top 10 Movies",
+  "description": "A personal countdown of my favorite movies.",
+  "items": [
+    {
+      "rank": 10,
+      "title": "Avengers: Endgame",
+      "year": 2019,
+      "director": "Anthony Russo & Joe Russo",
+      "quote": "I love this 3000",
+      "comment": "One of only 3 movies I've seen 4x in theaters. Legendary performance by RDJ. Can't write it any better. Satisfying conclusion to an epic 11 year movie run. Sadly, MCU went downhill fast after this.",
+      "image": ""
+    },
+    {
+      "rank": 9,
+      "title": "Office Space",
+      "year": 1999,
+      "director": "Mike Judge",
+      "quote": "I would do absolutely nothing",
+      "comment": "Only comedy on this list. Hits so close to home for anyone in corporate America. Really makes you wonder why we put up with the BS we do (bosses, meetings, memos, bills). Great soundtrack too.",
+      "image": ""
+    },
+    {
+      "rank": 8,
+      "title": "Fight Club",
+      "year": 1999,
+      "director": "David Fincher",
+      "quote": "I'm about to break the first rule",
+      "comment": "Unoriginal and probably on many top-10 lists. But that's for a reason. I recently saw this in theaters and it's aged quite well. Another movie from 1999 that really showcases how fucked up we've become. Slavery to corporate America for materialistic bs.",
+      "image": ""
+    }
+  ]
+}
