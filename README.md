@@ -12,10 +12,6 @@ A tiny static prototype for beautiful, shareable ranked lists.
 
 ## Run locally
 
-Open `index.html` directly in your browser, or use a local static server.
-
-If `fetch()` gives you trouble from a local file path, run:
-
 ```bash
 python3 -m http.server 3000
 ```
@@ -40,6 +36,15 @@ Then open it at:
 list.html?slug=top-10-movies
 ```
 
-## Deploy
+## Update workflow
 
-Push this project to GitHub, then import the repo into Vercel.
+After editing files:
+
+```bash
+git status
+git add .
+git commit -m "Improve mobile list viewer"
+git push
+```
+
+Vercel will automatically redeploy after the push.

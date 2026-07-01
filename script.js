@@ -3,11 +3,12 @@ const slug = params.get("slug") || "top-3-fruits";
 
 let list = null;
 let currentIndex = 0;
+let touchStartX = 0;
+let touchStartY = 0;
 
 const listTitle = document.getElementById("listTitle");
 const listDescription = document.getElementById("listDescription");
 const rankLabel = document.getElementById("rankLabel");
-const progressLabel = document.getElementById("progressLabel");
 const entry = document.getElementById("entry");
 const entryImage = document.getElementById("entryImage");
 const entryEmoji = document.getElementById("entryEmoji");
@@ -64,7 +65,6 @@ function render() {
   entry.style.animation = "";
 
   rankLabel.textContent = `#${item.rank}`;
-  progressLabel.textContent = `${currentIndex + 1} of ${list.items.length}`;
   entryTitle.textContent = item.title;
   entrySubtitle.textContent = item.subtitle || "";
   entryComment.textContent = item.comment || "";
@@ -87,23 +87,45 @@ function render() {
   renderDots();
 }
 
-prevButton.addEventListener("click", () => {
+function goPrevious() {
   if (currentIndex > 0) {
     currentIndex--;
     render();
   }
-});
+}
 
-nextButton.addEventListener("click", () => {
+function goNext() {
   if (list && currentIndex < list.items.length - 1) {
     currentIndex++;
     render();
   }
+}
+
+entry.addEventListener("touchstart", (event) => {
+  touchStartX = event.changedTouches[0].screenX;
+  touchStartY = event.changedTouches[0].screenY;
+}, { passive: true });
+
+entry.addEventListener("touchend", (event) => {
+  const touchEndX = event.changedTouches[0].screenX;
+  const touchEndY = event.changedTouches[0].screenY;
+
+  const deltaX = touchEndX - touchStartX;
+  const deltaY = touchEndY - touchStartY;
+  const isHorizontalSwipe = Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY);
+
+  if (!isHorizontalSwipe) return;
+
+  if (deltaX < 0) goNext();
+  if (deltaX > 0) goPrevious();
 });
 
+prevButton.addEventListener("click", goPrevious);
+nextButton.addEventListener("click", goNext);
+
 document.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowLeft") prevButton.click();
-  if (event.key === "ArrowRight") nextButton.click();
+  if (event.key === "ArrowLeft") goPrevious();
+  if (event.key === "ArrowRight") goNext();
 });
 
 shareButton.addEventListener("click", async () => {

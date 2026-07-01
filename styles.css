@@ -202,7 +202,7 @@ a {
 
 .rank-banner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 18px 24px;
   background: var(--white);
@@ -215,11 +215,6 @@ a {
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.12em;
-}
-
-.progress {
-  font-size: 0.9rem;
-  color: var(--muted);
 }
 
 .entry {
@@ -372,6 +367,7 @@ a {
 
   .entry {
     grid-template-columns: 1fr;
+    touch-action: pan-y;
   }
 
   .image-panel {
@@ -387,10 +383,25 @@ a {
   }
 
   .controls {
-    gap: 12px;
+    justify-content: center;
+    padding: 18px 24px 22px;
+  }
+
+  .controls button {
+    display: none;
   }
 
   .dots {
-    display: none;
+    display: flex;
+  }
+
+  .rank-card::after {
+    content: "Swipe left or right";
+    display: block;
+    text-align: center;
+    padding: 0 0 22px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 700;
   }
 }
