@@ -2,8 +2,9 @@
   "template": "movie",
   "title": "Top 10 Movies",
   "description": "A personal countdown of my favorite movies.",
-  "items": [
+  "slides": [
     {
+      "type": "movie",
       "rank": 10,
       "title": "Avengers: Endgame",
       "year": 2019,
@@ -14,6 +15,7 @@
       "imageAlt": "Avengers: Endgame poster"
     },
     {
+      "type": "movie",
       "rank": 9,
       "title": "Office Space",
       "year": 1999,
@@ -24,6 +26,7 @@
       "imageAlt": "Office Space poster"
     },
     {
+      "type": "movie",
       "rank": 8,
       "title": "Fight Club",
       "year": 1999,
@@ -34,6 +37,7 @@
       "imageAlt": "Fight Club poster"
     },
     {
+      "type": "movie",
       "rank": 7,
       "title": "Mission: Impossible – Ghost Protocol",
       "year": 2011,
@@ -44,6 +48,7 @@
       "imageAlt": "Mission: Impossible – Ghost Protocol poster"
     },
     {
+      "type": "movie",
       "rank": 6,
       "title": "Se7en",
       "year": 1995,
@@ -54,6 +59,7 @@
       "imageAlt": "Se7en poster"
     },
     {
+      "type": "movie",
       "rank": 5,
       "title": "Halloween",
       "year": 1978,
@@ -64,6 +70,7 @@
       "imageAlt": "Halloween poster"
     },
     {
+      "type": "movie",
       "rank": 4,
       "title": "The Dark Knight",
       "year": 2008,
@@ -74,6 +81,7 @@
       "imageAlt": "The Dark Knight poster"
     },
     {
+      "type": "movie",
       "rank": 3,
       "title": "Toy Story 3",
       "year": 2010,
@@ -84,6 +92,7 @@
       "imageAlt": "Toy Story 3 poster"
     },
     {
+      "type": "movie",
       "rank": 2,
       "title": "The Social Network",
       "year": 2010,
@@ -94,14 +103,58 @@
       "imageAlt": "The Social Network poster"
     },
     {
-  "rank": 1,
-  "title": "Spider-Man 2",
-  "year": 2004,
-  "director": "Sam Raimi",
-  "quote": "Vindicated",
-  "comment": "A lot of people come up to me and say, \"Hey Saroj, you're a movie guy. What's your favorite movie of all time?\" And unashamedly, I say Spider-Man 2. And they go, \"Really? The old one with Tobey Maguire?\" And I go, \"Yeah.\" And the conversation kind of just ends there. Now, when I'm talking to other actual movie people, I always get an \"Ooh, good choice.\" And I think there's a reason for that. I truly believe it's the perfect movie. Sure, there's nostalgia. There's nothing quite like being an 11-year-old in the theater in late June watching this on opening day. But it's a little bit of everything. It's the perfect hero storyline. You have a guy trying to get the girl while ending up fighting one of his genius mentors and his best friend who thinks he's betrayed him. He loses everything. He loses his powers, loses the girl to some hunk, decides he doesn't want to be the hero anymore... and then becomes, well, vindicated. Everyone knows the train scene is one of the best action sequences of all time. But if you actually go back and rewatch the movie, it's not just the train scene. There's a full 15 minutes before and after it that are absolutely brutal for a PG-13 film. This is still the most stylish action I've ever seen, and so little relies on cheap CGI. These films look ten times better than the new Tom Holland ones. It's just satisfying. Satisfying is the word I'd use to describe the action. Then at the end Peter reveals his identity to MJ, and has to sacrifice his love to be Spider-Man. Heartbreaking. Such a satisifying scene to see MJ run from wedding and risk everything to be with Peter. Leading to the iconic 'Go get 'em, Tiger' and the ending shot of Kirsten Dunst knowing she's risking everything to be with him. The ending is still so uncertain. Is Harry going to become the Goblin? There's just so many emotions that come out of this film. There's the iconic soundtrack as well. To me it's still number one, and I think it'll be a long time before that ever changes.",
-  "image": "https://occ-0-8407-92.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABaPxaQVhffNc8jQ8j-jCqjOUK4b5TVdQlZYaK1CqIz8eeA368n83Ib_Ynhe-aYXyfdiATKRofmFpxlIMwH0U7cUWrVDjJooSi-YV.jpg?r=3b7",
-  "imageAlt": "Spider-Man 2 poster"
-}
+      "type": "movie",
+      "rank": 1,
+      "title": "Spider-Man 2",
+      "year": 2004,
+      "director": "Sam Raimi",
+      "quote": "Vindicated",
+      "comment": "A lot of people come up to me and say, \"Hey Saroj, you're a movie guy. What's your favorite movie of all time?\" And unashamedly, I say Spider-Man 2. And they go, \"Really? The old one with Tobey Maguire?\" And I go, \"Yeah.\" And the conversation kind of just ends there. Now, when I'm talking to other actual movie people, I always get an \"Ooh, good choice.\" And I think there's a reason for that. I truly believe it's the perfect movie. Sure, there's nostalgia. There's nothing quite like being an 11-year-old in the theater in late June watching this on opening day. But it's a little bit of everything. It's the perfect hero storyline. You have a guy trying to get the girl while ending up fighting one of his genius mentors and his best friend who thinks he's betrayed him. He loses everything. He loses his powers, loses the girl to some hunk, decides he doesn't want to be the hero anymore... and then becomes, well, vindicated. Everyone knows the train scene is one of the best action sequences of all time. But if you actually go back and rewatch the movie, it's not just the train scene. There's a full 15 minutes before and after it that are absolutely brutal for a PG-13 film. This is still the most stylish action I've ever seen, and so little relies on cheap CGI. These films look ten times better than the new Tom Holland ones. It's just satisfying. Satisfying is the word I'd use to describe the action. Then at the end Peter reveals his identity to MJ, and has to sacrifice his love to be Spider-Man. Heartbreaking. Such a satisifying scene to see MJ run from wedding and risk everything to be with Peter. Leading to the iconic 'Go get 'em, Tiger' and the ending shot of Kirsten Dunst knowing she's risking everything to be with him. The ending is still so uncertain. Is Harry going to become the Goblin? There's just so many emotions that come out of this film. There's the iconic soundtrack as well. To me it's still number one, and I think it'll be a long time before that ever changes.",
+      "image": "https://occ-0-8407-92.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABaPxaQVhffNc8jQ8j-jCqjOUK4b5TVdQlZYaK1CqIz8eeA368n83Ib_Ynhe-aYXyfdiATKRofmFpxlIMwH0U7cUWrVDjJooSi-YV.jpg?r=3b7",
+      "imageAlt": "Spider-Man 2 poster"
+    },
+    {
+      "type": "stats",
+      "title": "So... did I get it right?",
+      "subtitle": "By the numbers",
+      "facts": [
+        "10 movies spanning 1978–2019.",
+        "Average release year: 2002.",
+        "David Fincher appears 3 times, more than any other director.",
+        "1999 is the most represented year with Office Space and Fight Club.",
+        "Trent Reznor appears twice: scoring The Social Network and through NIN's Closer in the Se7en title sequence.",
+        "Only one straight-up comedy made the list: Office Space.",
+        "Halloween and Se7en bring the horror/thriller energy.",
+        "The list heavily favors character-driven movies over pure spectacle.",
+        "1999 may be the greatest movie year ever."
+      ]
+    },
+    {
+      "type": "honorable_mentions",
+      "title": "Honorable Mentions",
+      "subtitle": "Movies that just missed the cut.",
+      "mentions": [
+        {
+          "title": "American Psycho",
+          "year": 2000,
+          "director": "Mary Harron"
+        },
+        {
+          "title": "Jurassic Park",
+          "year": 1993,
+          "director": "Steven Spielberg"
+        },
+        {
+          "title": "Goodfellas",
+          "year": 1990,
+          "director": "Martin Scorsese"
+        },
+        {
+          "title": "Whiplash",
+          "year": 2014,
+          "director": "Damien Chazelle"
+        }
+      ]
+    }
   ]
 }
